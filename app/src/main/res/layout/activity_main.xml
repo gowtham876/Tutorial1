@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="MARKETING BUDGET"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/v"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:background="@color/gery"
+            app:layout_constraintTop_toBottomOf="@+id/textView"></View>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/country_arrays"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:prompt="@string/spinner_title"
+            android:spinnerMode="dialog"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/country_arrays"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:spinnerMode="dropdown"
+            android:textSize="14sp"
+            android:tooltipText="@string/spinner_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gery"
+            app:layout_constraintTop_toBottomOf="@+id/spinner1"></View>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="PRODUCT DETAILS"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/v1" />
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gery"
+            app:layout_constraintTop_toBottomOf="@+id/title"></View>
+
+        <EditText
+            android:id="@+id/productcost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/colorPrimary"
+            android:tooltipText="@string/spinner_title"
+
+            android:fontFamily="sans-serif"
+            android:hint="Product Cost"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+        <EditText
+            android:id="@+id/productcount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/colorPrimary"
+            android:fontFamily="sans-serif"
+            android:hint="Product Count"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/productcost" />
+
+        <EditText
+            android:id="@+id/totalcost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/colorPrimary"
+            android:fontFamily="sans-serif"
+            android:hint="Total Cost"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/productcount" />
+
+        <EditText
+            android:id="@+id/gst"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/colorPrimary"
+            android:fontFamily="sans-serif"
+            android:hint="Product GST"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/totalcost" />
+
+        <EditText
+            android:id="@+id/netamount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/colorPrimary"
+            android:fontFamily="sans-serif"
+            android:hint="Net Amount"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintRight_toLeftOf="@+id/gst"
+            />
+     <!--   <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:text="SUBMIT"
+            app:layout_constraintTop_toBottomOf="@+id/netamount"
+            />-->
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
